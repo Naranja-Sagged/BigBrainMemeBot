@@ -15,16 +15,21 @@ class SlotsScreen(object):
         pygame.draw.rect(screen, pygame.Color(0, 0, 0), (200, 50, 200, 350), 10)
         pygame.draw.rect(screen, pygame.Color(0, 0, 0), (500, 50, 200, 350), 10)
         pygame.draw.rect(screen, pygame.Color(0, 0, 0), (800, 50, 200, 350), 10)
+        pygame.time.wait(2500)
         for x in range(0, 3):
             y = random.randint(0, 2)
-            #if (y % 2 == 1):
+            if y % 2 == 1:
                 # Display safety image
-                #safe = Image("Assets/safety.jpg", (200 + 300 * x, 125), (400 + 300 * x, 325))
-                #safe.draw(screen)
-            #else:
+                safe = pygame.image.load("Assets/safety.jpg")
+                safe = pygame.transform.scale(safe, (200, 200))
+                screen.blit(safe, [200 + 300 * x, 125])
+                pygame.display.flip()
+            else:
                 # Display death image
-                #death = Image("Assets/safety.jpg", (200 + 300 * x, 125), (400 + 300 * x, 325))
-                #death.draw(screen)
+                death = pygame.image.load("Assets/death.png")
+                screen.blit(death, [200 + 300 * x, 100])
+                pygame.display.flip()
+            pygame.time.wait(2500)
 
     def update(self):
         pass
