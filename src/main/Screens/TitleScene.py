@@ -1,6 +1,7 @@
 import pygame
 from src.main.Screens.Scene import Scene
 from src.main.Screens.Button import Button
+from src.main.Screens.shootingGame import shootingGame
 import src.main.Screens.SceneManager
 
 class TitleScene(Scene):
@@ -17,12 +18,14 @@ class TitleScene(Scene):
 
         startButton.draw(screen)
 
+        shootingScreen = shootingGame()
+
         pygame.display.flip()
-        # #Checks if the start button was clicked
-        # if(startButton.event_handler(events)):
-        #     manager.go_to()
-        #     manager.scene.render(screen, events, manager)
-        #     pygame.display.flip()
+        #Checks if the start button was clicked
+        if(startButton.event_handler(events)):
+            manager.go_to(shootingScreen)
+            manager.scene.render(screen, events, manager)
+            pygame.display.flip()
 
     def update(self):
          pass
