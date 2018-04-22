@@ -16,18 +16,21 @@ class shootingGame(object):
         screen.blit(self.image, [0, 0])
         pygame.display.flip()
         running = True
+
         while running:
-            keys = pygame.key.get_pressed()
-            if keys[pygame.K_d]:
-                self.image = pygame.image.load("Assets/Minigame1/LeftWin.png")
-                self.image = pygame.transform.scale(self.image, (1200, 600))
-                screen.blit(self.image, [0, 0])
-                pygame.display.flip()
-            if keys[pygame.K_k]:
-                self.image = pygame.image.load("Assets/Minigame1/RightWin.png")
-                self.image = pygame.transform.scale(self.image, (1200, 600))
-                screen.blit(self.image, [0, 0])
-                pygame.display.flip()
+            for event in pygame.event.get():
+                keys = pygame.key.get_pressed()
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_d:
+                    self.image = pygame.image.load("Assets/Minigame1/LeftWin.png")
+                    self.image = pygame.transform.scale(self.image, (1200, 600))
+                    screen.blit(self.image, [0, 0])
+                    pygame.display.flip()
+
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_k:
+                    self.image = pygame.image.load("Assets/Minigame1/RightWin.png")
+                    self.image = pygame.transform.scale(self.image, (1200, 600))
+                    screen.blit(self.image, [0, 0])
+                    pygame.display.flip()
 
 
 
