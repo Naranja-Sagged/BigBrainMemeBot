@@ -16,6 +16,7 @@ class SlotsScreen(object):
         pygame.draw.rect(screen, pygame.Color(0, 0, 0), (500, 50, 200, 350), 10)
         pygame.draw.rect(screen, pygame.Color(0, 0, 0), (800, 50, 200, 350), 10)
         pygame.time.wait(2500)
+        deathCount = 0;
         for x in range(0, 3):
             y = random.randint(0, 2)
             if y % 2 == 1:
@@ -29,7 +30,11 @@ class SlotsScreen(object):
                 death = pygame.image.load("Assets/death.png")
                 screen.blit(death, [200 + 300 * x, 100])
                 pygame.display.flip()
+                deathCount += 1
             pygame.time.wait(2500)
+
+        if deathCount = 3:
+            quit(1)
 
     def update(self):
         pass
