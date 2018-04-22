@@ -33,7 +33,7 @@ class SlotsScreen(object):
                 deathCount += 1
             pygame.time.wait(2500)
 
-        if deathCount = 3:
+        if deathCount == 3:
             quit(1)
 
     def update(self):
