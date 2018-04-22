@@ -1,4 +1,5 @@
-from src.main.Screens import TitleScene
+import pygame
+from src.main.Screens.TitleScene import TitleScene
 
 
 class SceneMananger(object):
