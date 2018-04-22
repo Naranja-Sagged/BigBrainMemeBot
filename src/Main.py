@@ -11,7 +11,7 @@ FLAGS = 0
 def main():
     pygame.init()
     screen = pygame.display.set_mode(DISPLAY, FLAGS, DEPTH)
-    pygame.display.set_caption("DEATH SLOTS")
+    pygame.display.set_caption("DEATH SLOTZ")
     timer = pygame.time.Clock()
     running = True
 

@@ -17,11 +17,12 @@ class TitleScene(Scene):
 
         startButton.draw(screen)
 
-        #Checks if the start button was clicked
-        if(startButton.event_handler(events)):
-            manager.go_to()
-            manager.scene.render(screen, events, manager)
-            pygame.display.flip()
+        pygame.display.flip()
+        # #Checks if the start button was clicked
+        # if(startButton.event_handler(events)):
+        #     manager.go_to()
+        #     manager.scene.render(screen, events, manager)
+        #     pygame.display.flip()
 
     def update(self):
          pass
