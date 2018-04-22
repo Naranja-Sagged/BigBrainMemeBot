@@ -13,7 +13,7 @@ class TitleScene(Scene):
 
         screen.blit(self.image, [0, 0])
 
-        startButton = Button("Assets/play.png", (727, 50), (400, 125))
+        startButton = Button("Assets/play.png", (727, 320), (400, 125))
 
         startButton.draw(screen)
 
